@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvf7u0x4o27pa"]
+
+[ext_resource type="Texture2D" uid="uid://dvlvj7xx5qp2m" path="res://assets/health-red 32px.png" id="1_ibnkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57rbe"]
+
+[node name="Healt" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_57rbe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+texture = ExtResource("1_ibnkg")
