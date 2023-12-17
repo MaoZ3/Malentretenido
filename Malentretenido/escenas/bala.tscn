@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8exefc0c6ky7"]
+
+[ext_resource type="Texture2D" uid="uid://cxcbfkj1wmsd4" path="res://assets/Bala.png" id="1_x5n2f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tqosv"]
+radius = 2.0
+height = 4.0
+
+[node name="Bala" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CapsuleShape2D_tqosv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_x5n2f")

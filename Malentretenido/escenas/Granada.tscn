@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4hqsriuh76kl"]
+
+[ext_resource type="Texture2D" uid="uid://soekbiyean08" path="res://assets/granada.png" id="1_rgtr3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rv43d"]
+radius = 5.0
+height = 12.0
+
+[node name="Granada" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CapsuleShape2D_rv43d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_rgtr3")
+offset = Vector2(0, -2)

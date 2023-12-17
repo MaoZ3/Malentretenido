@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cbf4bninc5r5k"]
+[gd_scene load_steps=36 format=3 uid="uid://cbf4bninc5r5k"]
 
 [ext_resource type="Texture2D" uid="uid://cxojp88mbi7gi" path="res://assets/Black/Gunner_Black_Idle.png" id="1_7wlrt"]
 [ext_resource type="Script" path="res://script/Impostor.gd" id="1_ye0o2"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c4s8jhk38yooe" path="res://assets/Black/Gunner_Black_Death.png" id="3_3ujah"]
 [ext_resource type="Texture2D" uid="uid://brs4wkg50k66y" path="res://assets/Black/Gunner_Black_Jump.png" id="5_bsyfk"]
 [ext_resource type="Texture2D" uid="uid://b46lb668qcyig" path="res://assets/Black/Gunner_Black_Run.png" id="6_gt5s1"]
+[ext_resource type="PackedScene" uid="uid://b8exefc0c6ky7" path="res://escenas/bala.tscn" id="7_w4yja"]
+[ext_resource type="PackedScene" uid="uid://b4hqsriuh76kl" path="res://escenas/Granada.tscn" id="8_xpsmr"]
+[ext_resource type="PackedScene" uid="uid://bovrd5xpfeiyh" path="res://escenas/ak_47.tscn" id="9_yuffl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jm823"]
 
@@ -222,3 +225,12 @@ frame_progress = 0.968553
 zoom = Vector2(3, 3)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Bala" parent="." instance=ExtResource("7_w4yja")]
+position = Vector2(35, -3)
+
+[node name="Granada" parent="." instance=ExtResource("8_xpsmr")]
+position = Vector2(37, -24)
+
+[node name="Ak47" parent="." instance=ExtResource("9_yuffl")]
+visible = false
