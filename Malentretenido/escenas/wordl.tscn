@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5bp50i6b2mnp"]
+[gd_scene load_steps=9 format=3 uid="uid://5bp50i6b2mnp"]
 
 [ext_resource type="Script" path="res://script/wordl.gd" id="1_73qki"]
 [ext_resource type="PackedScene" uid="uid://u4y53tvfwodg" path="res://escenas/tile.tscn" id="3_ge86g"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cr223011bmoq0" path="res://escenas/ui.tscn" id="5_pyrtf"]
 [ext_resource type="PackedScene" uid="uid://dk2j6xenbpkll" path="res://escenas/reload.tscn" id="6_q0bvj"]
 [ext_resource type="PackedScene" uid="uid://cvf7u0x4o27pa" path="res://escenas/healt.tscn" id="7_a6wc3"]
+[ext_resource type="PackedScene" uid="uid://crs0roub8yrbu" path="res://escenas/explosion.tscn" id="8_p3iv6"]
 
 [node name="Wordl" type="Node2D"]
 script = ExtResource("1_73qki")
@@ -30,3 +31,7 @@ position = Vector2(592, 589)
 
 [node name="Healt" parent="." instance=ExtResource("7_a6wc3")]
 position = Vector2(528, 590)
+
+[node name="explosion" parent="." instance=ExtResource("8_p3iv6")]
+top_level = true
+position = Vector2(646, 166)

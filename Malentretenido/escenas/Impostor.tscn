@@ -234,3 +234,4 @@ position = Vector2(37, -24)
 
 [node name="Ak47" parent="." instance=ExtResource("9_yuffl")]
 visible = false
+position = Vector2(6, -1)
