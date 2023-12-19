@@ -1,16 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://5bp50i6b2mnp"]
+[gd_scene load_steps=15 format=3 uid="uid://5bp50i6b2mnp"]
 
 [ext_resource type="Script" path="res://script/wordl.gd" id="1_73qki"]
 [ext_resource type="PackedScene" uid="uid://u4y53tvfwodg" path="res://escenas/tile.tscn" id="3_ge86g"]
 [ext_resource type="PackedScene" uid="uid://c03l2brpyfxcc" path="res://escenas/creep.tscn" id="4_mtrhy"]
 [ext_resource type="PackedScene" uid="uid://cbf4bninc5r5k" path="res://escenas/Impostor.tscn" id="4_uuold"]
 [ext_resource type="PackedScene" uid="uid://cr223011bmoq0" path="res://escenas/ui.tscn" id="5_pyrtf"]
+[ext_resource type="Script" path="res://script/ui.gd" id="6_evkyj"]
 [ext_resource type="PackedScene" uid="uid://dk2j6xenbpkll" path="res://escenas/reload.tscn" id="6_q0bvj"]
 [ext_resource type="PackedScene" uid="uid://cvf7u0x4o27pa" path="res://escenas/healt.tscn" id="7_a6wc3"]
+[ext_resource type="Script" path="res://script/reload.gd" id="8_mvtgf"]
 [ext_resource type="PackedScene" uid="uid://crs0roub8yrbu" path="res://escenas/explosion.tscn" id="8_p3iv6"]
+[ext_resource type="Script" path="res://script/healt.gd" id="10_d4vro"]
+[ext_resource type="Script" path="res://script/explosion.gd" id="12_cytp5"]
+[ext_resource type="PackedScene" uid="uid://bpea2y2t11r1s" path="res://escenas/droid.tscn" id="13_lfd3g"]
+[ext_resource type="Script" path="res://script/droid.gd" id="14_1ssea"]
 
 [node name="Wordl" type="Node2D"]
 script = ExtResource("1_73qki")
+metadata/_edit_vertical_guides_ = [0.0, 0.0, 0.0]
+metadata/_edit_horizontal_guides_ = [0.0]
 
 [node name="Imposor" parent="." instance=ExtResource("4_uuold")]
 top_level = true
@@ -25,13 +33,21 @@ position = Vector2(674, 214)
 [node name="ui" parent="." instance=ExtResource("5_pyrtf")]
 visible = false
 top_level = true
+script = ExtResource("6_evkyj")
 
 [node name="Ammo" parent="." instance=ExtResource("6_q0bvj")]
 position = Vector2(592, 589)
+script = ExtResource("8_mvtgf")
 
 [node name="Healt" parent="." instance=ExtResource("7_a6wc3")]
 position = Vector2(528, 590)
+script = ExtResource("10_d4vro")
 
 [node name="explosion" parent="." instance=ExtResource("8_p3iv6")]
 top_level = true
 position = Vector2(646, 166)
+script = ExtResource("12_cytp5")
+
+[node name="Droid" parent="." instance=ExtResource("13_lfd3g")]
+position = Vector2(442, 230)
+script = ExtResource("14_1ssea")
