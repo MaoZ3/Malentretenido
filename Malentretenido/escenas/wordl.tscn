@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://5bp50i6b2mnp"]
+[gd_scene load_steps=17 format=3 uid="uid://5bp50i6b2mnp"]
 
 [ext_resource type="Script" path="res://script/wordl.gd" id="1_73qki"]
 [ext_resource type="PackedScene" uid="uid://u4y53tvfwodg" path="res://escenas/tile.tscn" id="3_ge86g"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bpea2y2t11r1s" path="res://escenas/droid.tscn" id="13_lfd3g"]
 [ext_resource type="Script" path="res://script/droid.gd" id="14_1ssea"]
 [ext_resource type="PackedScene" uid="uid://c2fxd5j622sgi" path="res://escenas/storm_head.tscn" id="15_v2llh"]
+[ext_resource type="PackedScene" uid="uid://sk0qg4wkr08i" path="res://escenas/toster.tscn" id="16_s1gf1"]
 
 [node name="Wordl" type="Node2D"]
 script = ExtResource("1_73qki")
@@ -29,7 +30,7 @@ position = Vector2(342, 436)
 
 [node name="Creep" parent="." instance=ExtResource("4_mtrhy")]
 top_level = true
-position = Vector2(674, 214)
+position = Vector2(732, 215)
 
 [node name="ui" parent="." instance=ExtResource("5_pyrtf")]
 visible = false
@@ -50,8 +51,11 @@ position = Vector2(460, 380)
 script = ExtResource("12_cytp5")
 
 [node name="Droid" parent="." instance=ExtResource("13_lfd3g")]
-position = Vector2(442, 230)
+position = Vector2(73, 433)
 script = ExtResource("14_1ssea")
 
 [node name="StormHead" parent="." instance=ExtResource("15_v2llh")]
-position = Vector2(449, 433)
+position = Vector2(1124, 577)
+
+[node name="Toster" parent="." instance=ExtResource("16_s1gf1")]
+position = Vector2(1007, 430)

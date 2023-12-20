@@ -395,6 +395,7 @@ animations = [{
 }]
 
 [node name="StormHead" type="Node2D"]
+scale = Vector2(2, 2)
 
 [node name="Area2D" type="Area2D" parent="."]
 
