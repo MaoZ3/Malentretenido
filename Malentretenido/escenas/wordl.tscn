@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://5bp50i6b2mnp"]
+[gd_scene load_steps=15 format=3 uid="uid://5bp50i6b2mnp"]
 
 [ext_resource type="Script" path="res://script/wordl.gd" id="1_73qki"]
 [ext_resource type="PackedScene" uid="uid://u4y53tvfwodg" path="res://escenas/tile.tscn" id="3_ge86g"]
@@ -9,9 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dk2j6xenbpkll" path="res://escenas/reload.tscn" id="6_q0bvj"]
 [ext_resource type="PackedScene" uid="uid://cvf7u0x4o27pa" path="res://escenas/healt.tscn" id="7_a6wc3"]
 [ext_resource type="Script" path="res://script/reload.gd" id="8_mvtgf"]
-[ext_resource type="PackedScene" uid="uid://crs0roub8yrbu" path="res://escenas/explosion.tscn" id="8_p3iv6"]
 [ext_resource type="Script" path="res://script/healt.gd" id="10_d4vro"]
-[ext_resource type="Script" path="res://script/explosion.gd" id="12_cytp5"]
 [ext_resource type="PackedScene" uid="uid://bpea2y2t11r1s" path="res://escenas/droid.tscn" id="13_lfd3g"]
 [ext_resource type="Script" path="res://script/droid.gd" id="14_1ssea"]
 [ext_resource type="PackedScene" uid="uid://c2fxd5j622sgi" path="res://escenas/storm_head.tscn" id="15_v2llh"]
@@ -24,13 +22,13 @@ metadata/_edit_horizontal_guides_ = [0.0]
 
 [node name="Imposor" parent="." instance=ExtResource("4_uuold")]
 top_level = true
-position = Vector2(342, 436)
+position = Vector2(1319, 236)
 
 [node name="TilesBackgrounds" parent="." instance=ExtResource("3_ge86g")]
 
 [node name="Creep" parent="." instance=ExtResource("4_mtrhy")]
 top_level = true
-position = Vector2(732, 215)
+position = Vector2(1549, 455)
 
 [node name="ui" parent="." instance=ExtResource("5_pyrtf")]
 visible = false
@@ -45,17 +43,12 @@ script = ExtResource("8_mvtgf")
 position = Vector2(528, 590)
 script = ExtResource("10_d4vro")
 
-[node name="explosion" parent="." instance=ExtResource("8_p3iv6")]
-top_level = true
-position = Vector2(460, 380)
-script = ExtResource("12_cytp5")
-
 [node name="Droid" parent="." instance=ExtResource("13_lfd3g")]
-position = Vector2(73, 433)
+position = Vector2(1191, 278)
 script = ExtResource("14_1ssea")
 
 [node name="StormHead" parent="." instance=ExtResource("15_v2llh")]
-position = Vector2(1124, 577)
+position = Vector2(1249, 575)
 
 [node name="Toster" parent="." instance=ExtResource("16_s1gf1")]
-position = Vector2(1007, 430)
+position = Vector2(864, 431)

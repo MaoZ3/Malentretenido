@@ -407,5 +407,5 @@ shape = SubResource("CapsuleShape2D_ri0b7")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ap58q")
 animation = &"attac"
-frame_progress = 0.839841
+frame = 11
 offset = Vector2(6, -45)

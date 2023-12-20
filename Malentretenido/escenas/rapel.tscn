@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4miwalrcy6s8"]
+
+[ext_resource type="Texture2D" uid="uid://cmrgbw160nj3m" path="res://assets/gancho1.png" id="1_rnf76"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gvajf"]
+radius = 2.0
+height = 4.0
+
+[node name="Rapel" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CapsuleShape2D_gvajf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_rnf76")

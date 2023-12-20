@@ -299,8 +299,7 @@ script = ExtResource("1_wc7f3")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vh6kd")
-animation = &"run"
-frame_progress = 0.914093
+animation = &"attack"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

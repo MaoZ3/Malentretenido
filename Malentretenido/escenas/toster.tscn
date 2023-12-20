@@ -268,5 +268,5 @@ shape = SubResource("CapsuleShape2D_c33ao")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qj2x7")
 animation = &"attack"
-frame_progress = 0.994726
+frame = 6
 offset = Vector2(35, 0)
