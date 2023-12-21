@@ -222,14 +222,17 @@ sprite_frames = SubResource("SpriteFrames_bddp2")
 animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 zoom = Vector2(3, 3)
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Bala" parent="." instance=ExtResource("7_w4yja")]
+visible = false
 position = Vector2(35, -3)
 
 [node name="Granada" parent="." instance=ExtResource("8_xpsmr")]
+visible = false
 position = Vector2(58, -37)
 
 [node name="Ak47" parent="." instance=ExtResource("9_yuffl")]
@@ -237,4 +240,5 @@ visible = false
 position = Vector2(6, -1)
 
 [node name="Rapel" parent="." instance=ExtResource("10_16yv0")]
+visible = false
 position = Vector2(-1, -47)
