@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4hqsriuh76kl"]
+[gd_scene load_steps=4 format=3 uid="uid://b4hqsriuh76kl"]
 
 [ext_resource type="Texture2D" uid="uid://soekbiyean08" path="res://assets/granada.png" id="1_rgtr3"]
+[ext_resource type="PackedScene" uid="uid://crs0roub8yrbu" path="res://escenas/explosion.tscn" id="2_qa1ke"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rv43d"]
 radius = 5.0
@@ -18,3 +19,8 @@ shape = SubResource("CapsuleShape2D_rv43d")
 texture_filter = 1
 texture = ExtResource("1_rgtr3")
 offset = Vector2(0, -2)
+
+[node name="explocion" parent="." instance=ExtResource("2_qa1ke")]
+position = Vector2(54, -3)
+
+[node name="Timer" type="Timer" parent="."]
