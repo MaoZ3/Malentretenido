@@ -45,7 +45,12 @@ func _physics_process(delta):
 		reload()
 
 func shoot():
-	# Aquí implementa la lógica para disparar
+	
+	var mouse_position : Vector2 = (get_global_mouse_position() - global_position).normalized()
+	
+	
+
+	#Aquí implementa la lógica para disparar
 	# Por ejemplo, puedes instanciar un proyectil, hacer raycasts, etc.
 	print("Disparando...")
 
@@ -54,3 +59,7 @@ func reload():
 	# Puedes establecer la cantidad de munición al valor máximo, reproducir una animación, etc.
 	ammo = MAX_AMMO
 	print("Recargando...")
+	
+	
+	
+		
