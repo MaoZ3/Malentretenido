@@ -222,7 +222,6 @@ sprite_frames = SubResource("SpriteFrames_bddp2")
 animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 zoom = Vector2(3, 3)
 
 [node name="Timer" type="Timer" parent="."]
@@ -242,3 +241,6 @@ position = Vector2(6, -1)
 [node name="Rapel" parent="." instance=ExtResource("10_16yv0")]
 visible = false
 position = Vector2(-1, -47)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+gizmo_extents = 62.5
