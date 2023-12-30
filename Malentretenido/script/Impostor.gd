@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const JUMP2_VELOCITY = -300.0
 const MAX_AMMO = 30
 
 
@@ -30,9 +31,11 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
 		$AnimatedSprite2D.play("jump")
+
 	elif not is_on_floor():
 		$AnimatedSprite2D.play("jump")
-
+	if not is_on_floor() and Input.is_action_just_pressed("ui_accept"):
+		velocity.y = JUMP2_VELOCITY
 
 	if Input.is_action_just_pressed("ui_focus_attack") and ammo > 0:
 		$AnimatedSprite2D.play("shoot")
