@@ -1,6 +1,5 @@
-[gd_scene load_steps=15 format=3 uid="uid://5bp50i6b2mnp"]
+[gd_scene load_steps=16 format=3 uid="uid://5bp50i6b2mnp"]
 
-[ext_resource type="Script" path="res://script/wordl.gd" id="1_73qki"]
 [ext_resource type="PackedScene" uid="uid://u4y53tvfwodg" path="res://escenas/tile.tscn" id="3_ge86g"]
 [ext_resource type="PackedScene" uid="uid://c03l2brpyfxcc" path="res://escenas/creep.tscn" id="4_mtrhy"]
 [ext_resource type="PackedScene" uid="uid://cbf4bninc5r5k" path="res://escenas/Impostor.tscn" id="4_uuold"]
@@ -12,11 +11,26 @@
 [ext_resource type="Script" path="res://script/healt.gd" id="10_d4vro"]
 [ext_resource type="PackedScene" uid="uid://bpea2y2t11r1s" path="res://escenas/droid.tscn" id="13_lfd3g"]
 [ext_resource type="Script" path="res://script/droid.gd" id="14_1ssea"]
+[ext_resource type="PackedScene" uid="uid://b8exefc0c6ky7" path="res://escenas/bala.tscn" id="15_lvdph"]
 [ext_resource type="PackedScene" uid="uid://c2fxd5j622sgi" path="res://escenas/storm_head.tscn" id="15_v2llh"]
 [ext_resource type="PackedScene" uid="uid://sk0qg4wkr08i" path="res://escenas/toster.tscn" id="16_s1gf1"]
 
+[sub_resource type="GDScript" id="GDScript_ribbq"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="Wordl" type="Node2D"]
-script = ExtResource("1_73qki")
+script = SubResource("GDScript_ribbq")
 metadata/_edit_vertical_guides_ = [0.0, 0.0, 0.0]
 metadata/_edit_horizontal_guides_ = [0.0]
 
@@ -28,7 +42,7 @@ position = Vector2(1319, 236)
 
 [node name="Creep" parent="." instance=ExtResource("4_mtrhy")]
 top_level = true
-position = Vector2(1549, 455)
+position = Vector2(1653, 225)
 
 [node name="ui" parent="." instance=ExtResource("5_pyrtf")]
 visible = false
@@ -52,3 +66,5 @@ position = Vector2(1249, 575)
 
 [node name="Toster" parent="." instance=ExtResource("16_s1gf1")]
 position = Vector2(864, 431)
+
+[node name="Bala" parent="." instance=ExtResource("15_lvdph")]

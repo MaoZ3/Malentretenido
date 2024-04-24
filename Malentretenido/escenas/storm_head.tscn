@@ -406,6 +406,6 @@ shape = SubResource("CapsuleShape2D_ri0b7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ap58q")
-animation = &"attac"
-frame = 11
+animation = &"run"
+frame_progress = 0.734616
 offset = Vector2(6, -45)
