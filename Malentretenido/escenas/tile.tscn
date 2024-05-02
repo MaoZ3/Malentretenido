@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://u4y53tvfwodg"]
 
-[ext_resource type="Texture2D" uid="uid://bsg05nhpovtg6" path="res://assets/Assets/Tiles.png" id="1_bf128"]
+[ext_resource type="Texture2D" uid="uid://dkmwj0nd838id" path="res://assets/tiles/Tiles.png" id="1_bf128"]
 [ext_resource type="Script" path="res://script/tile.gd" id="1_y4fu8"]
-[ext_resource type="Texture2D" uid="uid://cmndrw4a6nmx7" path="res://assets/Assets/Props-01.png" id="2_3fd2w"]
-[ext_resource type="Texture2D" uid="uid://jx7asc0v5wj6" path="res://assets/Assets/Buildings.png" id="3_iuesm"]
-[ext_resource type="Texture2D" uid="uid://kf3ep7y4srqu" path="res://assets/Assets/Background Props.png" id="4_mh6t4"]
+[ext_resource type="Texture2D" uid="uid://cmndrw4a6nmx7" path="res://assets/tiles/Props-01.png" id="2_3fd2w"]
+[ext_resource type="Texture2D" uid="uid://jx7asc0v5wj6" path="res://assets/tiles/Buildings.png" id="3_iuesm"]
+[ext_resource type="Texture2D" uid="uid://kf3ep7y4srqu" path="res://assets/tiles/Background Props.png" id="4_mh6t4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xesnj"]
 

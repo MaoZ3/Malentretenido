@@ -6,28 +6,81 @@
 script/source = "extends CharacterBody2D
 
 
-@export var SPEED = 100
+@export var SPEED = 300
+
 
 var dir : float
 var spawnPos : Vector2
 var spawnRot : float
 
 func _ready():
+	
 	global_position = spawnPos
 	global_rotation = spawnRot
 
-func _physics_process(delta):
-	velocity = Vector2(0, -SPEED). rotated(dir)
+func _physics_process(_delta):
+	# Mueve la bala
 	move_and_slide()
+
+\"\"\"
+func _physics_process(_delta):
+	# Obtén la posición del mouse global
+	var mouse_position = get_global_mouse_position()
+
+	# Calcula la dirección desde el jugador hacia el mouse
+	var direction = (mouse_position - global_position).normalized()
+
+	# Define la velocidad de la bala (ajústala según tus necesidades)
+	var bullet_speed = 200  # Por ejemplo, 200 píxeles por segundo
+
+	# Calcula una dirección aleatoria para agregar variabilidad
+	var random_direction = Vector2(randf(), randf()).normalized()
+
+	# Combina la dirección del mouse con la dirección aleatoria
+	var final_direction = (direction + random_direction).normalized()
+
+	# Calcula la velocidad de la bala en función de la dirección y la velocidad
+	var velocity = final_direction * bullet_speed
+
+	# Mueve la bala
+	move_and_slide()
+#########################################################
+
+func _physics_process(_delta):
+	# Obtén la posición del mouse global
+	var mouse_position = get_global_mouse_position()
+
+	# Calcula la dirección desde el jugador hacia el mouse
+	var direction = (mouse_position - global_position).normalized()
+
+	# Define la velocidad de la bala (ajústala según tus necesidades)
+	var bullet_speed = 200  # Por ejemplo, 200 píxeles por segundo
+
+	# Calcula la velocidad de la bala en función de la dirección y la velocidad
+	var velocity = direction * bullet_speed
+
+	# Mueve la bala
+	move_and_slide()\"\"\"
+
+	
+\"\"\"func _physics_process(_delta):
+	(get_global_mouse_position())
+	velocity = Vector2(0, -SPEED). rotated(dir)
+
+
+	move_and_slide()\"\"\"
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tqosv"]
-radius = 2.0
-height = 4.0
+radius = 0.0
+height = 0.0
 
 [node name="Bala" type="CharacterBody2D"]
+position = Vector2(12, -3)
+collision_layer = 2
+collision_mask = 2
 script = SubResource("GDScript_lc1uo")
-SPEED = 300.0
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

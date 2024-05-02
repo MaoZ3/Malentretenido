@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@onready var Wordl = get_tree(). get_root(). get_node("Wordl")
+@onready var GameWordl = get_tree(). get_root(). get_node("GameWordl")
 @onready var Bala = load("res://escenas/bala.tscn")
 
 
@@ -15,7 +15,7 @@ var ammo = MAX_AMMO
 
 func _ready():
 	$AnimatedSprite2D.play("idle")
-	shoot()
+	#shoot()
 
 func _crunch():
 	#if event is InputEventKey and event.pressed:
@@ -63,14 +63,39 @@ func _physics_process(_delta):
 		reload()
 	
 	# Función que se llama cuando el jugador presiona la tecla de disparo
-func shoot(): #video de soot
+	
+	
+func shoot():
+	var instance = Bala. instantiate()  # Asegúrate de tener una clase llamada "Bullet"
+	instance.dir = rotation
+	instance.spawnPos = global_position
+	instance.spawnRot = rotation
+	get_tree().root.add_child(instance)  # Corregí el nombre de la variable "GameWorld"
+
+	# Calcula la dirección desde el jugador hacia el mouse
+	var mouse_position = get_global_mouse_position()
+	var direction = (mouse_position - global_position).normalized()
+
+	# Define la velocidad de la bala (ajústala según tus necesidades)
+	var bullet_speed = 500  # Por ejemplo, 500 píxeles por segundo
+
+	# Calcula la velocidad de la bala en función de la dirección y la velocidad
+	instance.velocity = direction * bullet_speed
+	
+
+	"""func shoot(): #video de soot
 	var instance = Bala. instantiate()
 	instance.dir = rotation
 	instance.spawnPos = global_position
 	instance.spawnRot = rotation
-	Wordl.add_child.call_deferred(instance)  
-	
-	
+	GameWordl.add_child.call_deferred(instance)  
+		# Calculate the direction from player to mouse
+	var mouse_position = get_global_mouse_position()
+	var direction = (mouse_position - global_position).normalized()
+
+# Set the bullet's velocity based on the direction and desired speed
+	var bullet_speed = 500  # Adjust this value as needed
+	instance.velocity = direction * bullet_speed"""
 	"""var mouse_position = (get_global_mouse_position() - global_position).normalized()
 	# Crear una instancia de la bala
 	var bullet = instance

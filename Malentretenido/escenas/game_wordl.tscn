@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm4ljcggewxgb"]
+
+[ext_resource type="PackedScene" uid="uid://5bp50i6b2mnp" path="res://escenas/lvl1.tscn" id="1_l4xlk"]
+[ext_resource type="PackedScene" uid="uid://cbf4bninc5r5k" path="res://escenas/Impostor.tscn" id="2_0ph4e"]
+[ext_resource type="PackedScene" uid="uid://0nj2w6qt2xma" path="res://escenas/f_10.tscn" id="3_kclwc"]
+[ext_resource type="PackedScene" uid="uid://dicxibfws6tc1" path="res://escenas/lumi.tscn" id="4_42h68"]
+[ext_resource type="PackedScene" uid="uid://b8exefc0c6ky7" path="res://escenas/bala.tscn" id="5_bkcyt"]
+[ext_resource type="PackedScene" uid="uid://ivreggl7e2va" path="res://escenas/gaUcho.tscn" id="6_4gfeo"]
+
+[node name="GameWordl" type="Node"]
+
+[node name="Lvl1" parent="." instance=ExtResource("1_l4xlk")]
+
+[node name="Imposor" parent="." instance=ExtResource("2_0ph4e")]
+position = Vector2(831, 432)
+metadata/_edit_group_ = true
+
+[node name="Bala" parent="Imposor" instance=ExtResource("5_bkcyt")]
+position = Vector2(15, -4)
+
+[node name="F10" parent="." instance=ExtResource("3_kclwc")]
+texture_filter = 1
+position = Vector2(883, 431)
+
+[node name="Lumi" parent="." instance=ExtResource("4_42h68")]
+position = Vector2(801, 436)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_4gfeo")]
+position = Vector2(1055, 230)
