@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://5ugdiqm56h78" path="res://assets/Ball and Chain Bot/hit.png" id="5_b7i0x"]
 [ext_resource type="Texture2D" uid="uid://dayn2p7d3d4vk" path="res://assets/Ball and Chain Bot/transition to charge.png" id="8_dg3q3"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yqlo3"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_a6n6p"]
 atlas = ExtResource("2_0haor")
 region = Rect2(0, 0, 126, 39)
@@ -172,7 +174,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_th3c0")
 }],
-"loop": false,
+"loop": true,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -288,24 +290,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yqlo3"]
-
 [node name="Creep" type="Node2D"]
 script = ExtResource("1_wc7f3")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-texture_filter = 1
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_vh6kd")
-animation = &"attack"
-frame = 7
-frame_progress = 1.0
-flip_h = true
+[node name="Area2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
 shape = SubResource("CapsuleShape2D_yqlo3")
 
 [node name="Timer" type="Timer" parent="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_vh6kd")
+animation = &"attack"
+flip_h = true

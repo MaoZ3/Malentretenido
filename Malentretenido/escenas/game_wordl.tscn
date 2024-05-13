@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm4ljcggewxgb"]
+[gd_scene load_steps=14 format=3 uid="uid://bm4ljcggewxgb"]
 
 [ext_resource type="PackedScene" uid="uid://5bp50i6b2mnp" path="res://escenas/lvl1.tscn" id="1_l4xlk"]
 [ext_resource type="PackedScene" uid="uid://cbf4bninc5r5k" path="res://escenas/Impostor.tscn" id="2_0ph4e"]
@@ -6,24 +6,56 @@
 [ext_resource type="PackedScene" uid="uid://dicxibfws6tc1" path="res://escenas/lumi.tscn" id="4_42h68"]
 [ext_resource type="PackedScene" uid="uid://b8exefc0c6ky7" path="res://escenas/bala.tscn" id="5_bkcyt"]
 [ext_resource type="PackedScene" uid="uid://ivreggl7e2va" path="res://escenas/gaUcho.tscn" id="6_4gfeo"]
+[ext_resource type="PackedScene" uid="uid://dn56p1ka3ll0h" path="res://escenas/zombi.tscn" id="7_psyis"]
+[ext_resource type="PackedScene" uid="uid://sk0qg4wkr08i" path="res://escenas/toster.tscn" id="8_ndfo7"]
+[ext_resource type="PackedScene" uid="uid://c2fxd5j622sgi" path="res://escenas/storm_head.tscn" id="9_wa54q"]
+[ext_resource type="PackedScene" uid="uid://bpea2y2t11r1s" path="res://escenas/droid.tscn" id="10_ptrhf"]
+[ext_resource type="PackedScene" uid="uid://c03l2brpyfxcc" path="res://escenas/creep.tscn" id="11_85fhe"]
+[ext_resource type="PackedScene" uid="uid://b1o1l26sdbmoy" path="res://zombi2.tscn" id="12_4stfx"]
+[ext_resource type="PackedScene" uid="uid://b5whjwqt7f1gp" path="res://lvl2.tscn" id="12_7hoxf"]
 
 [node name="GameWordl" type="Node"]
 
-[node name="Lvl1" parent="." instance=ExtResource("1_l4xlk")]
+[node name="lvl1" type="Node" parent="."]
 
-[node name="Imposor" parent="." instance=ExtResource("2_0ph4e")]
-position = Vector2(831, 432)
-metadata/_edit_group_ = true
+[node name="Lvl1" parent="lvl1" instance=ExtResource("1_l4xlk")]
+position = Vector2(-468, 3)
 
-[node name="Bala" parent="Imposor" instance=ExtResource("5_bkcyt")]
+[node name="Imposor" parent="lvl1/Lvl1" instance=ExtResource("2_0ph4e")]
+position = Vector2(822, 348)
+
+[node name="Bala" parent="lvl1/Lvl1/Imposor" instance=ExtResource("5_bkcyt")]
 position = Vector2(15, -4)
 
-[node name="F10" parent="." instance=ExtResource("3_kclwc")]
+[node name="F10" parent="lvl1/Lvl1" instance=ExtResource("3_kclwc")]
 texture_filter = 1
-position = Vector2(883, 431)
+position = Vector2(872, 432)
 
-[node name="Lumi" parent="." instance=ExtResource("4_42h68")]
-position = Vector2(801, 436)
+[node name="Lumi" parent="lvl1/Lvl1" instance=ExtResource("4_42h68")]
+position = Vector2(1020, 294)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_4gfeo")]
-position = Vector2(1055, 230)
+[node name="CharacterBody2D" parent="lvl1/Lvl1" instance=ExtResource("6_4gfeo")]
+position = Vector2(1004, 425)
+
+[node name="CharacterBody2D2" parent="lvl1/Lvl1" instance=ExtResource("7_psyis")]
+position = Vector2(846, 432)
+
+[node name="Toster" parent="lvl1/Lvl1" instance=ExtResource("8_ndfo7")]
+position = Vector2(811, 476)
+
+[node name="StormHead" parent="lvl1/Lvl1" instance=ExtResource("9_wa54q")]
+position = Vector2(934, 416)
+
+[node name="Droid" parent="lvl1/Lvl1" instance=ExtResource("10_ptrhf")]
+position = Vector2(798, 439)
+
+[node name="Creep2" parent="lvl1/Lvl1" instance=ExtResource("11_85fhe")]
+position = Vector2(1037, 469)
+
+[node name="CharacterBody2D3" parent="lvl1/Lvl1" instance=ExtResource("12_4stfx")]
+position = Vector2(969, 433)
+
+[node name="lvl2" type="Node" parent="."]
+
+[node name="lvl2" parent="lvl2" instance=ExtResource("12_7hoxf")]
+visible = false

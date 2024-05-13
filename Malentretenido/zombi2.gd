@@ -1,9 +1,6 @@
-extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
+extends CharacterBody2D
 func _ready():
-	$AnimatedSprite2D.play("attack")
+	$AnimatedSprite2D.play("runleft")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

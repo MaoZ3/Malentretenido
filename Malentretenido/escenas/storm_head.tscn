@@ -1,5 +1,6 @@
-[gd_scene load_steps=59 format=3 uid="uid://c2fxd5j622sgi"]
+[gd_scene load_steps=60 format=3 uid="uid://c2fxd5j622sgi"]
 
+[ext_resource type="Script" path="res://escenas/storm_head.gd" id="1_04eaj"]
 [ext_resource type="Texture2D" uid="uid://cj6mv8feyhsyp" path="res://assets/stormhead/idle.png" id="1_gh5wc"]
 [ext_resource type="Texture2D" uid="uid://cmn3g7lfekm35" path="res://assets/stormhead/attack.png" id="1_wh060"]
 [ext_resource type="Texture2D" uid="uid://dy4e6xjsuc27p" path="res://assets/stormhead/death.png" id="2_0fx7r"]
@@ -396,8 +397,9 @@ animations = [{
 
 [node name="StormHead" type="Node2D"]
 scale = Vector2(2, 2)
+script = ExtResource("1_04eaj")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
@@ -406,6 +408,5 @@ shape = SubResource("CapsuleShape2D_ri0b7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ap58q")
-animation = &"run"
-frame_progress = 0.734616
+animation = &"attac"
 offset = Vector2(6, -45)

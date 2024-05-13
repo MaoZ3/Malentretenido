@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=3 uid="uid://sk0qg4wkr08i"]
+[gd_scene load_steps=40 format=3 uid="uid://sk0qg4wkr08i"]
 
 [ext_resource type="Texture2D" uid="uid://d4cuhoibr4te" path="res://assets/Toaster Bot/attack.png" id="1_8tq0k"]
+[ext_resource type="Script" path="res://escenas/toster.gd" id="1_hwojh"]
 [ext_resource type="Texture2D" uid="uid://bes1upntudv4a" path="res://assets/Toaster Bot/death.png" id="2_wyphf"]
 [ext_resource type="Texture2D" uid="uid://bqlpmleuaa4ps" path="res://assets/Toaster Bot/damaged.png" id="3_5immb"]
 [ext_resource type="Texture2D" uid="uid://vbjjiv3suoqj" path="res://assets/Toaster Bot/idle.png" id="4_wjg4h"]
@@ -257,8 +258,9 @@ animations = [{
 
 [node name="Toster" type="Node2D"]
 scale = Vector2(2, 2)
+script = ExtResource("1_hwojh")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
@@ -268,5 +270,5 @@ shape = SubResource("CapsuleShape2D_c33ao")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qj2x7")
 animation = &"attack"
-frame = 6
+frame_progress = 0.593586
 offset = Vector2(35, 0)

@@ -1,13 +1,14 @@
-[gd_scene load_steps=38 format=3 uid="uid://bpea2y2t11r1s"]
+[gd_scene load_steps=39 format=3 uid="uid://bpea2y2t11r1s"]
 
+[ext_resource type="Script" path="res://escenas/droid.gd" id="1_kdyo0"]
 [ext_resource type="Texture2D" uid="uid://2s3raua0rpm3" path="res://assets/Droid Zapper/attack.png" id="1_nuxku"]
 [ext_resource type="Texture2D" uid="uid://cucyb1o4adu6j" path="res://assets/Droid Zapper/wake.png" id="1_ut3jn"]
 [ext_resource type="Texture2D" uid="uid://cgt05nhcp3go5" path="res://assets/Droid Zapper/damaged and death.png" id="2_fmlav"]
 [ext_resource type="Texture2D" uid="uid://cx6d84x8yilsv" path="res://assets/Droid Zapper/run.png" id="3_nnp7c"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6xm5"]
-radius = 6.0
-height = 20.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x3bju"]
+radius = 3.0
+height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxx7s"]
 atlas = ExtResource("1_nuxku")
@@ -166,7 +167,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x4476")
 }],
-"loop": false,
+"loop": true,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -255,16 +256,15 @@ animations = [{
 }]
 
 [node name="Droid" type="Node2D"]
+script = ExtResource("1_kdyo0")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
-shape = SubResource("CapsuleShape2D_s6xm5")
+shape = SubResource("CapsuleShape2D_x3bju")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_4qj6i")
 animation = &"attack"
-frame = 3
 offset = Vector2(13, -11)

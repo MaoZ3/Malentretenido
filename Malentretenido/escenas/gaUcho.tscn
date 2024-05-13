@@ -1,5 +1,6 @@
-[gd_scene load_steps=42 format=3 uid="uid://ivreggl7e2va"]
+[gd_scene load_steps=43 format=3 uid="uid://ivreggl7e2va"]
 
+[ext_resource type="Script" path="res://escenas/gaUcho.gd" id="1_7utmd"]
 [ext_resource type="Texture2D" uid="uid://bnr3ppa1vx14h" path="res://assets/HeroSpritesSheet_AllAnimations.png" id="1_rbpq3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fcp3"]
@@ -284,6 +285,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_7utmd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -294,5 +296,4 @@ texture_filter = 1
 position = Vector2(-9, -6)
 sprite_frames = SubResource("SpriteFrames_vley6")
 animation = &"new_animation"
-frame = 30
-frame_progress = 0.532593
+frame_progress = 0.645681
